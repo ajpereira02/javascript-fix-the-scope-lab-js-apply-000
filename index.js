@@ -22,13 +22,13 @@ function add2(n) {
   // Feel free to move things around!
 }
 
-var theFunk = "FUNKY!"
-  function funkyFunction() {
-  return theFunk
-
+var funkyFunction = function() {
+  return function() {
+    return "FUNKY!"
+  }
 }
 
 // We want to set theFunk equal to "FUNKY!" using our funkyFunction.
 // NOTE: you only need to modify the code below this line.
-console.log(funkyFunction)
-
+var theFunk = funkyFunction ()()
+// In order to access the innerFunction to achieve FUNKY! I need to return funkyFunction inside theFunk variable with () ()
